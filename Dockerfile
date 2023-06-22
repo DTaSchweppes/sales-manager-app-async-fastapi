@@ -1,9 +1,9 @@
-FROM tiangolo/uvicorn-gunicorn:python3.9
+FROM tiangolo/uvicorn-gunicorn-fastapi:latest
 
-COPY requirements.txt /tmp/requirements.txt
-RUN pip install --no-cache-dir -r /tmp/requirements.txt
+RUN apt-get update && \
+    apt-get install -y postgresql-client
 
 COPY ./app /app
+WORKDIR /app
 
-COPY app/main.py main.py
-
+RUN pip install -r requirements.txt

@@ -1,18 +1,27 @@
 version: '3'
+
 services:
-  web:
+  app:
     build: .
-    container_name: saleapp
-    external_links:
-      - db-pg:db-pg
+    ports:
+      - "8080:8080"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: db
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+    depends_on:
+      - db
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: db
     volumes:
-      - ./app:/app
-    ports:
-      - "80:80:"
-  database:
-    image: "postgres"
-    container_name: db-pg
-    env_file:
-      -database.env
-    ports:
-      -"5432:5432"
+      - db-data:/var/lib/postgresql/data/
+
+volumes:
+  db-data:
