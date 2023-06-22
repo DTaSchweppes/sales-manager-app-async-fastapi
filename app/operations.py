@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from app.models.models import Item, MainCategory, SecondCategory, Vendor, Brand
-from app.models.schemas import ItemSchema, MainCategorySchema, SecondCategorySchema, VendorSchema, BrandSchema
+from models.models import Item, MainCategory, SecondCategory, Vendor, Brand
+from models.schemas import ItemSchema, MainCategorySchema, SecondCategorySchema, VendorSchema, BrandSchema
 
 
 async def get_item_by_id(db: AsyncSession, item_id: int):

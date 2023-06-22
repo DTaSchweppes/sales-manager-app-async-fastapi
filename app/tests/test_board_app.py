@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 from fastapi import status
-from main import app
+from app.main import app
 
 # python -m pytest app/tests/
 

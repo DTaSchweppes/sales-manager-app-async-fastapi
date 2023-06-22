@@ -1,7 +1,8 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-from app.config import Base
 from sqlalchemy.orm import relationship, mapped_column
+from sqlalchemy.ext.declarative import declarative_base
 
+Base = declarative_base()
 
 class Brand(Base):
     """

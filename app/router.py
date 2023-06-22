@@ -1,10 +1,10 @@
 from fastapi import APIRouter, HTTPException
 from fastapi import Depends
 from sqlalchemy.ext.asyncio import AsyncSession
-
-from app import operations
-from app.config import SessionLocal, engine, Base
-from app.models.schemas import ItemSchema, VendorSchema, BrandSchema, MainCategorySchema, SecondCategorySchema, Response
+from models.models import Base
+import operations
+from config import SessionLocal, engine
+from models.schemas import ItemSchema, VendorSchema, BrandSchema, MainCategorySchema, SecondCategorySchema, Response
 
 router = APIRouter()
 

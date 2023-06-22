@@ -5,5 +5,5 @@ RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 COPY ./app /app
 
-COPY main.py main.py
+COPY app/main.py main.py
 
