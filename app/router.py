@@ -100,10 +100,10 @@ async def update_item_service(id: int, name, img, db: AsyncSession = Depends(get
                     message="Get item",
                     result=result).dict(exclude_none=True)
 
-@router.get('/main_category')
+@router.get('/main_categories')
 async def get_name_main_category(name:str, db: AsyncSession = Depends(get_db)):
     result = await operations.get_main_category_by_name(db, name)
     return Response(status="Ok",
                     code="200",
                     message="Get item",
-                    result=result).dict(exclude_none=True)
+                    result=result.name).dict(exclude_none=True)
