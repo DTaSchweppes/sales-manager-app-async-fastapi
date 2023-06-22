@@ -11,6 +11,7 @@
 ![image](https://github.com/DTaSchweppes/sales-manager-app-async-fastapi/assets/45369246/760bcec4-bda4-4973-837c-39ea4b03f9f8)
 
 Все операции асинхронны
+
 ![image](https://github.com/DTaSchweppes/sales-manager-app-async-fastapi/assets/45369246/160d19c1-d5cb-4131-92d8-f2b2485c2330)
 
 ![image](https://github.com/DTaSchweppes/sales-manager-app-async-fastapi/assets/45369246/6c45251f-60e7-491f-9a1b-c3d16078f396)
